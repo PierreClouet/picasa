@@ -1,0 +1,162 @@
+/* GENERAL */
+
+*{
+    outline:none;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    margin:0 !important;
+}
+
+a {
+    text-decoration:none !important;
+}
+
+
+/* NAv */
+
+.nav {
+    width:100%;
+    height:75px;
+    z-index:10;
+    background:#000;
+}
+
+.title {
+    float:left;
+    font-size:30px;
+    color:#fff;
+    margin-top:15px;
+}
+
+.btn {
+    padding:0;
+    float:right;
+}
+
+.btn a {
+    color:#fff;
+    background:#F44336;
+    padding:10px 10px 12px 10px;
+    border-radius:10px;
+    float:right;
+    margin:15px 25px;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.btn a:hover {
+    color:#F44336;
+    background:#fff;
+}
+
+.menu {
+    float:left;
+    list-style-type: none;
+}
+
+.menu li {
+    float:left;
+    padding:21px 15px;
+    border-top:3px solid transparent;
+}
+
+.menu li:hover {
+    border-top:3px solid #536DFE;
+}
+
+.menu a {
+    color:#fff;
+    font-size:18px;
+
+}
+
+.search {
+    float:right;
+    padding-right:50px;
+}
+
+.search-bar {
+    padding:5px;
+    border-radius:5px;
+    border:none;
+    margin-top:22px;
+}
+
+.submit {
+    border:none;
+    border-radius:5px;
+    background:#fff;
+    padding:5px;
+}
+
+/* FORM */
+
+.ajout-album {
+    position:fixed;
+    left:80%;
+    margin-top:80px;
+    text-align:center;
+    width:250px;
+    height:150px;
+    background:#f6f6f6;
+    display:none;
+}
+
+.ajout-photo {
+    position:fixed;
+    left:80%;
+    margin-top:80px;
+    text-align:center;
+    width:250px;
+    height:270px;
+    background:#f6f6f6;
+    display:none;
+}
+
+.ajout-album input,
+.ajout-photo input{
+    box-shadow:0 0 1px #444;
+}
+
+.ajout-album input[type="text"],
+.ajout-photo input[type="text"]{
+    border:none;
+    padding:10px;
+    margin-top:20px;
+    border-radius:5px;
+}
+
+.ajout-album input[type="submit"],
+.ajout-photo input[type="submit"]{
+    border:none;
+    padding:10px;
+    margin-top:20px;
+    border-radius:5px;
+    background:#fff;
+    color:#536DFE;
+    transition:all 0.2s ease;
+}
+
+.ajout-album input[type="submit"]:hover,
+.ajout-photo input[type="submit"]:hover {
+    color:#fff;
+    background:#536DFE;
+}
+
+.ajout-photo input[type=file]{/*modification du conteneur*/
+    -webkit-apparence:none;
+    background-color:red;
+}
+.ajout-photo input[type=file]::-webkit-file-upload-button{/*modification du bouton*/
+    -webkit-apparence:none;
+    background:red none;
+    border:solid 2px lime;
+
+}
+
+.imgseparate img {
+    width:250px;
+}
