@@ -8,10 +8,15 @@
 
 body {
     margin:0 !important;
+    background-color:#e4e4e4;
 }
 
 a {
     text-decoration:none !important;
+}
+
+.shadow{
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
 }
 
 
@@ -204,12 +209,49 @@ a {
     background:#fff !important;
     box-shadow: 0 0 3px #444 inset;
 }
+
+
+
+/* STYLE CONTAINER */
+
 .avatar {
     margin:5px;
     overflow:hidden;
+    position: relative;
+    z-index:999;
+    margin-top:20px;
 }
 
 .avatar img {
     height:250px;
+}
 
+.drag-zone{
+    background-color:#fff;
+    min-height:400px;
+    margin-bottom:40px;
+    display: flex;
+    align-items:center;
+}
+
+.drag-zone .imgseparate{
+    width:25%;
+}
+
+.imgs{
+    background-color:#fff;
+    min-height:800px
+}
+
+.album-title{
+    margin-top:0;
+    font-size:1.5em;
+    position: absolute;
+    padding:20px;
+    z-index:999999;
+    color:#ff0000;
+}
+
+.nom-photo{
+    text-align:inherit;
 }

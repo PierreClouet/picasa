@@ -30,7 +30,7 @@ class Config {
         /**
          * Define relative base path.
          */
-        define('DIR', '/picassa/picassa/');
+        define('DIR', '/');
 
         /**
          * Set default controller and method for legacy calls.
@@ -46,7 +46,7 @@ class Config {
         /**
          * Set a default language.
          */
-        define('LANGUAGE_CODE', 'en');
+        define('LANGUAGE_CODE', 'fr');
 
         //database details ONLY NEEDED IF USING A DATABASE
 
@@ -73,7 +73,7 @@ class Config {
         /**
          * Database password.
          */
-        define('DB_PASS', '');
+        define('DB_PASS', 'root');
 
         /**
          * PREFER to be used in database calls default is smvc_

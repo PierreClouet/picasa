@@ -1,3 +1,30 @@
+<p>Error on Feb 03, 2016 19:08PM - unlink(app/templates/default/img/56af79682fc48.jpg): No such file or directory in /Users/deveyracantoine/picasa/picassa/app/Controllers/Welcome.php on line 118</p><p>Error on Feb 03, 2016 19:08PM - unlink(app/templates/default/img/56af79682fc48.jpg): No such file or directory in /Users/deveyracantoine/picasa/picassa/app/Controllers/Welcome.php on line 118</p><h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Feb 03, 2016 19:05PM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)</p>
+
+           <p><strong>Code:</strong> 1045</p>
+
+           <p><strong>File:</strong> /Users/deveyracantoine/picasa/picassa/app/Helpers/DB/DBManager.php</p>
+
+           <p><strong>Line:</strong> 22</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 /Users/deveyracantoine/picasa/picassa/app/Helpers/DB/DBManager.php(22): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /Users/deveyracantoine/picasa/picassa/app/Helpers/DB/DBManager.php(35): Helpers\DB\DBManager->__construct()
+#2 /Users/deveyracantoine/picasa/picassa/app/Helpers/DB/EntityManager.php(22): Helpers\DB\DBManager::getInstance()
+#3 /Users/deveyracantoine/picasa/picassa/app/Helpers/DB/EntityManager.php(31): Helpers\DB\EntityManager->__construct()
+#4 /Users/deveyracantoine/picasa/picassa/app/Core/Controller.php(48): Helpers\DB\EntityManager::getInstance()
+#5 /Users/deveyracantoine/picasa/picassa/app/Controllers/Welcome.php(38): Core\Controller->__construct()
+#6 /Users/deveyracantoine/picasa/picassa/app/Core/Router.php(122): Controllers\Welcome->__construct(NULL)
+#7 /Users/deveyracantoine/picasa/picassa/app/Core/Router.php(211): Core\Router::invokeObject('Controllers\\Wel...')
+#8 /Users/deveyracantoine/picasa/picassa/app/Core/routes.php(46): Core\Router::dispatch()
+#9 /Users/deveyracantoine/picasa/picassa/index.php(81): require('/Users/deveyrac...')
+#10 {main}</pre>
+
+           <hr />
 <p>Error on Feb 01, 2016 15:36PM - Invalid argument supplied for foreach() in D:\Logiciels\EasyPHP-DevServer-14.1VC9\data\localweb\picassa\picassa\app\Helpers\HTML.php on line 16</p><h3>Exception information:</h3>
 
            <p><strong>Date:</strong> Jan 27, 2016 8:18AM</p>

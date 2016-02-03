@@ -132,15 +132,19 @@ class Welcome extends Controller
     }
 
     public function lier($idAlbum,$idPhoto){
-        $sql = new AlbumSQL();
+        $sql = new AlbumsSQL();
         $a = $sql->findById($idAlbum);
 
-        if($a->utilisateur-id == Session::get('id')) {
+        if($a->utilisateur_id == Session::get('id')){
+            $pdo = DBManager::getInstance()->getPDO();
+            $q = $pdo->prepare("DELETE FROM contient WHERE photo_id=?");
+            $q->execute(array($idPhoto));
+            
             $c = new Contient($idAlbum,$idPhoto);
+            EntityManager::getInstance()->save($construct);
+        }
 
-        EntityManager::getInstance()->save($c);
-    }
-        Url::previous();
+//        Url::previous();
     }
 }
 

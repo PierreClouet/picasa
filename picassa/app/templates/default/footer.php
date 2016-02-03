@@ -16,8 +16,9 @@ $hooks = Hooks::get();
 <?php
 Assets::js(array(
 	Url::templatePath() . 'js/jquery.js',
-	Url::templatePath() . 'js/script.js',
-	Url::templatePath() . 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
+	Url::templatePath() . 'js/jqui.js',
+	Url::templatePath() . 'js/bootstrap.js',
+	Url::templatePath() . 'js/script.js'
 ));
 
 //hook for plugging in javascript
