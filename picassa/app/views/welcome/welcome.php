@@ -4,7 +4,7 @@ use Helpers\HTML;
 
 //print_r($_SESSION);
 ?>
-<div class="container-fluid">
+<main class="container-fluid">
 
 <?php
 echo"<div class='imgs col-md-3 shadow'>";
@@ -36,7 +36,7 @@ if($data['albums'] != false){
 echo "</div>"
 ?>
 
-</div>
+</main>
 
 
 

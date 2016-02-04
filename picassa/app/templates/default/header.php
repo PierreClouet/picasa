@@ -44,7 +44,7 @@ $hooks = Hooks::get();
 //hook for running code after body tag
 $hooks->run('afterBody');
 ?>
-<div class="nav navbar">
+<div class="nav navbar-fixed-top">
 	<div class="container-fluid">
 		<span class="title"><?php echo $data['title'] ?></span>
 		<ul class="menu">
