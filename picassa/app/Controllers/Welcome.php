@@ -49,16 +49,16 @@ class Welcome extends Controller
 
         $sql = new PhotoSQL();
         $data['photo'] = $sql->prepareFindAll()
-            ->orderBy("post_date DESC")
-            ->limit(0,10)
-            ->execute();
+        ->orderBy("post_date DESC")
+        ->limit(0,10)
+        ->execute();
 
         if(Session::get('id')==null) {
             $data['albums'] = false;
         }else{
             $sqlA = new AlbumSQL();
             $data['albums'] = $sqlA->prepareFindByUtilisateur_id(Session::get('id'))
-                ->orderBy("nom")->execute();
+            ->orderBy("nom")->execute();
         }
 
 
@@ -99,13 +99,13 @@ class Welcome extends Controller
                     Url::redirect();
 
                 }else
-                    $error = "Problème transfert";
+                $error = "Problème transfert";
             }else
-                {
+            {
                 echo $error;
                 print_r($_FILES);
                 die(1);
-                }
+            }
 
         }
 
@@ -120,7 +120,7 @@ class Welcome extends Controller
         }
 
         Url::previous();
-}
+    }
 
     public function ajoutalbum() {
         if(isset($_POST['nom']) && Session::get('id')!=null){
@@ -132,16 +132,18 @@ class Welcome extends Controller
     }
 
     public function lier($idAlbum,$idPhoto){
-        $sql = new AlbumsSQL();
+        $sql = new AlbumSQL();
         $a = $sql->findById($idAlbum);
 
         if($a->utilisateur_id == Session::get('id')){
-            $pdo = DBManager::getInstance()->getPDO();
-            $q = $pdo->prepare("DELETE FROM contient WHERE photo_id=?");
-            $q->execute(array($idPhoto));
+            // $pdo = DBManager::getInstance()->getPdo();
+            // $q = $pdo->prepare("DELETE FROM contient WHERE photo_id=?");
+            // $q->execute(array($idPhoto));
+            // nique tout le reste
+
             
             $c = new Contient($idAlbum,$idPhoto);
-            EntityManager::getInstance()->save($construct);
+            EntityManager::getInstance()->save($c);
         }
 
 //        Url::previous();

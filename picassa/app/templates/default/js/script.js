@@ -78,19 +78,21 @@ $(function () {
         drop: function (event, ui) {
             ui.draggable.detach().appendTo($(this));
 
-          var container = $(this).attr("data-id");
-          var photo = ui.draggable.attr("data-id");
-          var route = container+"/"+photo;
-          var routefinale = 'lier/'+route;
-          console.log(routefinale);
+          var idAlbum = $(this).attr("data-id");
+          var idPhoto = ui.draggable.attr("data-id");
+          console.log('/lier/'+idAlbum+"/"+idPhoto);
 
           $.ajax({
                 type: "GET", // Le type de ma requete
-                url: routefinale, // L url vers laquelle la requete sera envoyee
+                url: 'lier/ '+idAlbum+"/"+idPhoto, // L url vers laquelle la requete sera envoyee
                 success: function (data, textStatus, jqXHR) {console.log('worked')},
                 error: function (jqXHR, textStatus, errorThrown) {console.log('no workeded')},
             });
       }
   });
 });
+
+$(function(){
+
+})
 

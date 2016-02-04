@@ -231,7 +231,8 @@ main{
     background-color:#fff;
     min-height:400px;
     margin-bottom:40px;
-    display:block
+    display: flex;
+    align-items:center;
 }
 
 .drag-zone .imgseparate{
