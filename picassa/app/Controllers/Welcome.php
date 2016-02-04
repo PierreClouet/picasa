@@ -146,7 +146,7 @@ class Welcome extends Controller
             EntityManager::getInstance()->save($c);
         }
 
-//        Url::previous();
+       // Url::previous();
     }
 }
 

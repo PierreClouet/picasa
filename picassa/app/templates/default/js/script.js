@@ -84,7 +84,7 @@ $(function () {
 
           $.ajax({
                 type: "GET", // Le type de ma requete
-                url: 'lier/ '+idAlbum+"/"+idPhoto, // L url vers laquelle la requete sera envoyee
+                url: 'lier/'+idAlbum+"/"+idPhoto, // L url vers laquelle la requete sera envoyee
                 success: function (data, textStatus, jqXHR) {console.log('worked')},
                 error: function (jqXHR, textStatus, errorThrown) {console.log('no workeded')},
             });
