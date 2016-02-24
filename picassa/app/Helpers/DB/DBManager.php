@@ -37,7 +37,9 @@ class  DBManager {
         return self::$instance;
     }
 
-
+public function getPDO() {
+    return $this->pdo;
+}
     /**
      * Prepare the query
      */

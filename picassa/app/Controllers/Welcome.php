@@ -13,6 +13,8 @@ namespace Controllers;
 use Core\View;
 use Core\Controller;
 use Helpers\DB\EntityManager;
+use Helpers\DB\DBManager;
+
 use Helpers\Session;
 use Models\Queries\FilmSQL;
 use Models\Queries\AlbumSQL;
@@ -136,12 +138,9 @@ class Welcome extends Controller
         $a = $sql->findById($idAlbum);
 
         if($a->utilisateur_id == Session::get('id')){
-            // $pdo = DBManager::getInstance()->getPdo();
-            // $q = $pdo->prepare("DELETE FROM contient WHERE photo_id=?");
-            // $q->execute(array($idPhoto));
-            // nique tout le reste
-
-            
+             $pdo = DBManager::getInstance()->getPDO();
+             $q = $pdo->prepare("DELETE FROM contient WHERE photo_id=?");
+             $q->execute(array($idPhoto));
             $c = new Contient($idAlbum,$idPhoto);
             EntityManager::getInstance()->save($c);
         }
